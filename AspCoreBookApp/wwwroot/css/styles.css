@@ -1,0 +1,305 @@
+﻿body {
+}
+
+header {
+    background-color: #539ac7;
+    padding: 10px;
+}
+
+input {
+    border: 1px solid #539ac7;
+}
+
+textarea {
+    border: 1px solid #539ac7;
+}
+
+header a {
+    color: #FFFFFF;
+}
+
+    header a:link {
+        text-decoration: none;
+    }
+
+    header a:hover {
+        text-decoration: underline;
+    }
+
+header .rightMenu {
+    position: absolute;
+    top: 85px;
+    right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: right;
+}
+
+#photoTitle {
+    display: inline-block;
+    background-image: url("../img/user-icon.png");
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+}
+
+#title {
+    text-align: right;
+    font-size: 25px;
+    margin-right: 10px;
+    font-family: 'Segoe Script';
+    float: right;
+    color: #FFFFFF;
+}
+
+#blog {
+    width: 100%;
+    height: 100%;
+}
+
+#lenta {
+    width: 79%;
+    display: inline-block;
+    padding-right: 1%;
+}
+
+#cloud {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+fieldset {
+    border: 1px solid #539ac7;
+}
+
+.menu {
+    text-align: right;
+    display: inline-block;
+    margin: 0px;
+    padding-left: 10px;
+    color: #FFFFFF;
+}
+
+    .menu ul {
+        margin: 0;
+        padding: 0;
+    }
+
+        .menu ul li {
+            font-size: 15px;
+            margin-right: 10px;
+            display: inline;
+            list-style-type: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+            .menu ul li a {
+                color: #FFFFFF;
+            }
+
+                .menu ul li a:link {
+                    text-decoration: none;
+                }
+
+                .menu ul li a:hover {
+                    text-decoration: underline;
+                }
+
+.post {
+    width: 100%;
+    margin-top: 20px;
+}
+
+    .post .footer {
+        padding-top: 10px;
+    }
+
+    .post .tagsBlock {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .post .actionBlock {
+        display: inline-block;
+        float: right;
+    }
+
+        .post .actionBlock .commentsBlock {
+            display: inline-block;
+        }
+
+        .post .actionBlock .deleteBlock {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+.link {
+    margin-right: 5px;
+    display: inline-block;
+    cursor: pointer;
+    color: -webkit-link;
+    text-decoration: underline;
+}
+
+.commentsList {
+    width: 70%;
+    min-width: 300px;
+}
+
+    .commentsList .header {
+        background-color: #539ac7;
+        color: #000000;
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .commentsList .content {
+        background-color: #ffffff;
+        padding: 10px;
+        border: 1px solid #539ac7;
+        font-size: 17px;
+    }
+
+.header {
+    background-color: #539ac7;
+    color: #FFFFFF;
+    font-size: 23px;
+    padding: 10px;
+}
+
+    .header .action {
+        margin-top: -10px;
+    }
+
+    .header a {
+        color: #FFFFFF;
+    }
+
+        .header a:link {
+            text-decoration: none;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+        }
+
+.content {
+    background-color: #d9edf7;
+    padding: 10px;
+    font-size: 19px;
+}
+
+.tagCloud {
+    margin-top: 20px;
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+.writeCommentBlock .commentInput {
+    width: 70%;
+    min-width: 300px;
+}
+
+.commentArea {
+    width: 100%;
+}
+
+.actionBlock {
+    text-align: right;
+}
+
+.itemCount {
+    color: #539ac7;
+}
+
+.leftFloat {
+    display: inline-block;
+    float: left;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.rightFloat {
+    display: inline-block;
+    float: right;
+}
+
+.commentLayout {
+    margin-bottom: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.newPost {
+    width: 97%;
+}
+
+    .newPost .postHeader {
+        width: 100%;
+    }
+
+    .newPost .postSubmit {
+        font-size: 15px;
+    }
+
+    .newPost .postTags {
+        width: 100%;
+    }
+
+ul.pagingNumber {
+    margin: 0;
+    padding: 0;
+    max-width: 1000px;
+}
+
+    ul.pagingNumber li {
+        font-size: 12px;
+        margin-right: 3px;
+        display: inline-block;
+        list-style-type: none;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+        ul.pagingNumber li a {
+            cursor: pointer;
+        }
+
+            ul.pagingNumber li a:link {
+                text-decoration: none;
+            }
+
+            ul.pagingNumber li a:hover {
+                text-decoration: underline;
+            }
+
+.loginForm {
+    border: 1px solid #539ac7;
+    background-color: #FFFFFF;
+    z-index: 9999;
+    width: 300px;
+    height: 120px;
+    text-align: left;
+    opacity: 0.85;
+    filter: alpha(Opacity=85);
+    padding: 10px;
+}
+
+    .loginForm input {
+        width: 98%;
+    }
+
+.nameLabel {
+    color: #FFFFFF;
+    font-size: 19px;
+}
+
+.marginRight30 {
+    margin-right: 30px;
+}
