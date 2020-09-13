@@ -136,7 +136,7 @@ namespace Domain.Data.Repositories
         {
             using (var context = ContextFactory.CreateDbContext(ConnectionString))
             {
-                
+
                 context.Books.Update(book);
                 await context.SaveChangesAsync();
             }

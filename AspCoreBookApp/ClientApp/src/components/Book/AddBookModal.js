@@ -27,7 +27,6 @@ export class AddBookModal extends Component {
     }
 
     handleSubmit(event) {
-        console.log(event.target.BookPublisher)
         event.preventDefault();
         fetch(window.location.origin +'/api/book/post', {
             method: 'POST',

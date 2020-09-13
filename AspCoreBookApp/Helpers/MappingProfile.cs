@@ -27,8 +27,9 @@ namespace AspCoreBookApp.Helpers
                         b.BookId = src.ID;
                     }
                 });
+            CreateMap<BookDto, BooksToAuthors>()
+                .ForMember(dest => dest.Book, opt => opt.MapFrom(src => src.ID));
 
-            
             CreateMap<Author, AuthorDto>()
                 .ForMember(dest => dest.AuthorID, opt => opt.MapFrom(x => x.Id));
             CreateMap<AuthorDto, Author>()

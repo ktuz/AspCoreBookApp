@@ -35,17 +35,9 @@ export class EditBookModal extends Component {
         this.setState({ addAuthors: [{ AuthorID: "", Name: "" }] })
     }
 
-    handleChange(e, index) {
-        const { name, value } = e.target;
-        const list = [...addAuthors];
-        list[index][name] = value;
-        setInputList(list);
-    }
     handleRemove(index) {
         this.state.addAuthors.splice(index, 1);
         this.setState({ addAuthors: this.state.addAuthors })
-
-
     }
 
     handleSubmit(event) {
@@ -64,7 +56,7 @@ export class EditBookModal extends Component {
                 PublisherID: event.target.BookPublisher.value,
                 Price: event.target.BookPrice.value,
                 PublishedAt: event.target.BookDate.value,
-                Authors: this.props.auths
+                Authors: this.addAuthors
 
             })
         })
@@ -144,26 +136,26 @@ export class EditBookModal extends Component {
                                     <Form.Group>
 
                                         <div className="container">
-                                            <Select
-                                                required
-                                                multi
-                                                options={this.state.authors}
-                                                values={this.props.auths}
-                                                placeholder="Add Authors"
-                                                labelField="name"
-                                                valueField="name"
-                                                placeholder="Search authors"
-                                                dropdownPosition="top"
-                                                keepSelectedInList="true"
-                                                dropdownPosition="bottom"
-                                                direction="ltr"
-                                                dropdownHeight="250px"
-                                                dropdownHandleRenderer={({ state }) => (
-                                                    // if dropdown is open show "–" else show "+"
-                                                    <span>{state.dropdown ? '–' : '+'}</span>
-                                                )}
-                                                onChange={(value) => this.props.auths = value}
-                                            />
+                                                <Select
+                                                    required
+                                                    multi
+                                                    options={this.state.authors}
+                                                    values={this.props.auths}
+                                                    placeholder="Add Authors"
+                                                    labelField="name"
+                                                    valueField="name"
+                                                    placeholder="Search authors"
+                                                    dropdownPosition="top"
+                                                    keepSelectedInList="true"
+                                                    dropdownPosition="bottom"
+                                                    direction="ltr"
+                                                    dropdownHeight="250px"
+                                                    dropdownHandleRenderer={({ state }) => (
+                                                        // if dropdown is open show "–" else show "+"
+                                                        <span>{state.dropdown ? '–' : '+'}</span>
+                                                    )}
+                                                    onChange={(value) => this.addAuthors= value}
+                                    />
                                         </div>
 
 

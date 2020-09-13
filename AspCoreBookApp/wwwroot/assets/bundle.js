@@ -59269,7 +59269,6 @@ var AddBookModal = exports.AddBookModal = function (_Component) {
     }, {
         key: 'handleSubmit',
         value: function handleSubmit(event) {
-            console.log(event.target.BookPublisher);
             event.preventDefault();
             fetch(window.location.origin + '/api/book/post', {
                 method: 'POST',
@@ -61673,8 +61672,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -61718,17 +61715,6 @@ var EditBookModal = exports.EditBookModal = function (_Component) {
             this.setState({ addAuthors: [{ AuthorID: "", Name: "" }] });
         }
     }, {
-        key: 'handleChange',
-        value: function handleChange(e, index) {
-            var _e$target = e.target,
-                name = _e$target.name,
-                value = _e$target.value;
-
-            var list = [].concat(_toConsumableArray(addAuthors));
-            list[index][name] = value;
-            setInputList(list);
-        }
-    }, {
         key: 'handleRemove',
         value: function handleRemove(index) {
             this.state.addAuthors.splice(index, 1);
@@ -61752,7 +61738,7 @@ var EditBookModal = exports.EditBookModal = function (_Component) {
                     PublisherID: event.target.BookPublisher.value,
                     Price: event.target.BookPrice.value,
                     PublishedAt: event.target.BookDate.value,
-                    Authors: this.props.auths
+                    Authors: this.addAuthors
 
                 })
             });
@@ -61904,7 +61890,7 @@ var EditBookModal = exports.EditBookModal = function (_Component) {
                                                         )
                                                     );
                                                 }), _defineProperty(_React$createElement, 'onChange', function onChange(value) {
-                                                    return _this3.props.auths = value;
+                                                    return _this3.addAuthors = value;
                                                 }), _React$createElement))
                                             )
                                         ),
