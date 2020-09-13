@@ -76,8 +76,8 @@ onChangeRadionButtonValue(event) {
 
     render() {
         const { books, bookid, bookname, bookdesc, bookdate, price, auths, publs, publsid, publsnm  } = this.state;
-        let AddModalClose = () => this.setState({ AddModalShow: false }/*, this.refreshList*/);
-        let EditModalClose = () => this.setState({ EditModalShow: false }/*, this.refreshList*/);
+        let AddModalClose = () => this.setState({ AddModalShow: false }, this.refreshList("",""));
+        let EditModalClose = () => this.setState({ EditModalShow: false }, this.refreshList("",""));
         console.log(books)
         return (
             <div className="container">

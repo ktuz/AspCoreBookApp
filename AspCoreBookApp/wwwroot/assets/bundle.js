@@ -49180,10 +49180,10 @@ var Book = exports.Book = function (_Component) {
                 publsnm = _state.publsnm;
 
             var AddModalClose = function AddModalClose() {
-                return _this3.setState({ AddModalShow: false /*, this.refreshList*/ });
+                return _this3.setState({ AddModalShow: false }, _this3.refreshList("", ""));
             };
             var EditModalClose = function EditModalClose() {
-                return _this3.setState({ EditModalShow: false /*, this.refreshList*/ });
+                return _this3.setState({ EditModalShow: false }, _this3.refreshList("", ""));
             };
             console.log(books);
             return _react2.default.createElement(
